@@ -34,3 +34,17 @@ Fri Mar 27 05:56:36 PM UTC 2026:
  tests:  0|6
 total_score: 0/60
 1dfe0b4
+Fri Mar 27 06:04:35 PM UTC 2026: 
+ list.c | 6 ++++++
+ 1 file changed, 6 insertions(+)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘pushCurrent’:
+list.c:87:5: error: expected ‘}’ before ‘else’
+   87 |     else {
+      |     ^~~~
+list.c:88:15: error: ‘List’ {aka ‘struct List’} has no member named ‘trail’; did you mean ‘tail’?
+   88 |         list->trail = newNode;
+      |               ^~~~~
+      |               tail
+7379eeb
