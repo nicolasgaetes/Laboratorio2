@@ -58,3 +58,14 @@ list.c:87:5: error: expected ‘}’ before ‘else’
    87 |     else {
       |     ^~~~
 60e6260
+Fri Mar 27 06:06:05 PM UTC 2026: 
+ list.c | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘pushCurrent’:
+list.c:90:15: error: ‘List’ {aka ‘struct List’} has no member named ‘trail’; did you mean ‘tail’?
+   90 |         list->trail = newNode;
+      |               ^~~~~
+      |               tail
+c1c101d
