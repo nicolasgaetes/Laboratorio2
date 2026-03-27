@@ -82,7 +82,7 @@ void pushCurrent(List * list, void * data) {
     }
     //Creo un nuevo nodo
     Node* newNode = createNode(data);
-    //Nuevon nodo apunta al anterior que será el actual
+    //Nuevo nodo apunta al anterior que será el actual
     newNode->prev = list->current;
     // Nuevo nodo apunta al que venia despues de current
     newNode->next = list->current->next;
@@ -97,6 +97,10 @@ void pushCurrent(List * list, void * data) {
     }
     //Ahora el current apunta al nuevo nodo
     list->current->next = newNode;
+    // [A] [B] [C]
+    // [A] [B] [newNode] [C]
+    // [A] [B]
+    // [A] [B] [newNode]
 }
 
 void * popFront(List * list) {
