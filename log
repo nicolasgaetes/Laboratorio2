@@ -12,3 +12,11 @@ list.c:86:9: error: ‘List’ {aka ‘struct List’} has no member named ‘si
    86 |     list->size++;
       |         ^~
 278e22c
+Fri Mar 27 05:55:48 PM UTC 2026: 
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘pushCurrent’:
+list.c:86:9: error: ‘List’ {aka ‘struct List’} has no member named ‘size’
+   86 |     list->size++;
+      |         ^~
+ce26fb9
