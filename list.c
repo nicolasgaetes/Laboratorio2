@@ -79,14 +79,14 @@ void * prevList(List * list) {
 
 void pushFront(List * list, void * data) {
     Node* newNode = createNode(data);
-    if (list->head == NULL) {
+    if (list->head == NULL) { //caso si la lista esta vacia
         list->head = newNode;
         list->tail = newNode;
         return;
     }
-    newNode->next = list->head;
+    newNode->next = list->head; //conecto el nuevo nodo al inicio
     list->head->prev = newNode;
-    list->head = newNode;
+    list->head = newNode; //actualizo el head
 }
 
 void pushBack(List * list, void * data) {
