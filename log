@@ -152,3 +152,15 @@ Sat Mar 28 11:39:08 PM UTC 2026:
  tests:  6|3
 total_score: 30/60
 19ee7b9
+Sat Mar 28 11:41:21 PM UTC 2026: 
+ list.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘lastList’:
+list.c:66:5: error: ‘last’ undeclared (first use in this function); did you mean ‘list’?
+   66 |     last->current = list->tail;
+      |     ^~~~
+      |     list
+list.c:66:5: note: each undeclared identifier is reported only once for each function it appears in
+88269eb
