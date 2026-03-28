@@ -211,3 +211,20 @@ Sat Mar 28 11:53:09 PM UTC 2026:
  tests:  11|1
 total_score: 50/60
 9e54d6a
+Sat Mar 28 11:59:43 PM UTC 2026: 
+ list.c | 33 ++++++++++++++++-----------------
+ 1 file changed, 16 insertions(+), 17 deletions(-)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘popCurrent’:
+list.c:138:11: error: unused variable ‘der’ [-Werror=unused-variable]
+  138 |     Node* der = eliminado->next;
+      |           ^~~
+list.c:137:11: error: unused variable ‘izq’ [-Werror=unused-variable]
+  137 |     Node* izq = eliminado->prev;
+      |           ^~~
+list.c:136:11: error: unused variable ‘data’ [-Werror=unused-variable]
+  136 |     void* data = eliminado->data;
+      |           ^~~~
+cc1: all warnings being treated as errors
+2b31593

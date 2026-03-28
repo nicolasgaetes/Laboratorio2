@@ -97,27 +97,20 @@ void pushBack(List * list, void * data) {
 // 5. Programe la función void pushCurrent(List * list, void* data), la cual agrega un dato a continuación del nodo apuntado por list->current.
 
 void pushCurrent(List * list, void * data) {
-    //Verifico si hay un nodo actual
-    if (list->current == NULL){
+    if (list->current == NULL){ //Verifico si hay un nodo actual
         return;
     }
-    //Creo un nuevo nodo
-    Node* newNode = createNode(data);
-    //Nuevo nodo apunta al anterior que será el actual
-    newNode->prev = list->current;
-    // Nuevo nodo apunta al que venia despues de current
-    newNode->next = list->current->next;
-    //Pregunto si el nodo actual tiene siguiente
-    if (list->current->next != NULL){
-        //Ajusto el nodo para que apunte al nuevo nodo, antes a current y ahora a newNode
-        list->current->next->prev = newNode;
+    Node* newNode = createNode(data);//Creo un nuevo nodo
+    newNode->prev = list->current;//Nuevo nodo apunta al anterior que será el actual
+    newNode->next = list->current->next;// Nuevo nodo apunta al que venia despues de current
+    if (list->current->next != NULL){//Pregunto si el nodo actual tiene siguiente
+        list->current->next->prev = newNode;//Ajusto el nodo para que apunte al nuevo nodo, antes a current y ahora a newNode
     }
-    //Si no hay siguiente, nuevo nodo pasa a ser el nuevo tail
-    else {
+    else {//Si no hay siguiente, nuevo nodo pasa a ser el nuevo tail
         list->tail = newNode;
     }
-    //Ahora el current apunta al nuevo nodo
-    list->current->next = newNode;
+    
+    list->current->next = newNode;//Ahora el current apunta al nuevo nodo
     // [A] [B] [C]
     // [A] [B] [newNode] [C]
     // [A] [B]
@@ -138,6 +131,12 @@ void * popBack(List * list) {
 // Nota: El current debe quedar apuntando al nodo siguiente del eliminado.
 
 void * popCurrent(List * list) {
+    if (list->current == NULL) return NULL;
+    Node* eliminado = list->current;
+    void* data = eliminado->data;
+    Node* izq = eliminado->prev;
+    Node* der = eliminado->next;
+        
     return NULL;
 }
 
