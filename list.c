@@ -63,7 +63,7 @@ void * nextList(List * list) {
 //   - La segunda función retorna el dato del nodo anterior a current y actualiza el current para que apunte a ese nodo.
 
 void * lastList(List * list) {
-    last->current = list->tail;
+    list->current = list->tail;
     return list->current->data;
 }
 
