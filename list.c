@@ -141,7 +141,6 @@ void * popCurrent(List * list) {
     if (der != NULL) der->prev = izq;
     else list->tail = izq;
     list->current = der;
-    free(eliminado);
         
     return data;
 }
