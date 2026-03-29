@@ -140,8 +140,10 @@ void * popCurrent(List * list) {
     else list->head = der;
     if (der != NULL) der->prev = izq;
     else list->tail = izq;
+    list->current = der;
+    free(eliminado);
         
-    return NULL;
+    return data;
 }
 
 void cleanList(List * list) {
