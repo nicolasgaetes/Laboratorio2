@@ -136,6 +136,10 @@ void * popCurrent(List * list) {
     void* data = eliminado->data;
     Node* izq = eliminado->prev;
     Node* der = eliminado->next;
+    if (izq != NULL) izq->next = der;
+    else list->head = der;
+    if (der != NULL) der->prev = izq;
+    else list->tail = izq;
         
     return NULL;
 }

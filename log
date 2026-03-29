@@ -228,3 +228,14 @@ list.c:136:11: error: unused variable ‘data’ [-Werror=unused-variable]
       |           ^~~~
 cc1: all warnings being treated as errors
 2b31593
+Sun Mar 29 12:01:28 AM UTC 2026: 
+ list.c | 4 ++++
+ 1 file changed, 4 insertions(+)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘popCurrent’:
+list.c:136:11: error: unused variable ‘data’ [-Werror=unused-variable]
+  136 |     void* data = eliminado->data;
+      |           ^~~~
+cc1: all warnings being treated as errors
+5f0bbc9
